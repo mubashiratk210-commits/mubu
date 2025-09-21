@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glamour Rent Jewels</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdf7f2;
+      color: #333;
+    }
+    header {
+      background-color: #d4af37;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #fff;
+    }
+    header p {
+      color: #fff;
+      margin-top: 5px;
+    }
+    nav {
+      background: #b8860b;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background: url('https://images.unsplash.com/photo-1599643477877-530eb83abc9e') no-repeat center/cover;
+      color: white;
+    }
+    .hero h2 {
+      font-size: 1.8rem;
+      background: rgba(0,0,0,0.5);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    /* Category buttons */
+    .category-buttons {
+      text-align: center;
+      padding: 20px;
+    }
+    .category-buttons button {
+      background: #d4af37;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .category-buttons button:hover {
+      background: #b8860b;
+    }
+
+    .jewels-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .jewel {
+      flex: 1 1 250px;
+      max-width: 280px;
+      margin: 15px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: none; /* hidden by default */
+    }
+    .jewel img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .jewel h3 {
+      margin-top: 10px;
+    }
+    .price {
+      font-weight: bold;
+      margin: 5px 0;
+      color: #d4af37;
+    }
+    .rent-btn {
+      display: inline-block;
+      background: #25D366;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .rent-btn:hover {
+      background: #1ebe57;
+    }
+    section
+     {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #b8860b;
+      color: white;
+      margin-top: 30px;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+      .hero h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Glamour Rent Jewels 💍</h1>
+    <p>Shine Bright Without Buying</p>
+    Buying</p>
+  <!-- Add Jewelry Banner Here -->
+  <img src="head.JPEG" alt="Rental Jewelry Banner" 
+       style="width:100%; max-height:400px; object-fit:cover; border-radius:10px; margin-top:15px;">
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#collection">Collection</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <h2>Luxury Jewelry on Rent ✨</h2>
+  </section>
+
+  <!-- CATEGORY BUTTONS -->
+  <div class="category-buttons" id="collection">
+    <button onclick="filterJewels('all')">All</button>
+    <button onclick="filterJewels('necklace')">Necklaces</button>
+    <button onclick="filterJewels('earring')">Earrings</button>
+    <button onclick="filterJewels('bangle')">Bangles</button>
+    <button onclick="filterJewels('bridal')">Bridal Sets</button>
+  </div>
+
+  <!-- JEWELRY ITEMS -->
+  <div class="jewels-container">
+    <!-- Necklaces -->
+    <div class="jewel necklace">
+      <img src="gold.JPEG" alt="Gold Necklace">
+      <h3>Gold Plated Necklace</h3>
+      <p class="price">Rent: ₹420</p>
+      <a class="rent-btn" href="https://wa.me/919876543210?text=I%20want%20to%20rent%20Gold%20Plated%20Necklace" target="_blank">Rent via WhatsApp</a>
+    </div>
+
+    <div class="jewel necklace">
+      <img src="pearl.JPEG" alt="Pearl Necklace">
+      <h3>Pearl Choker Necklace</h3>
+      <p class="price">Rent: ₹499</p>
+      <a class="rent-btn" href="https://wa.me/919876543210?text=I%20want%20to%20rent%20Pearl%20Choker%20Necklace" target="_blank">Rent via WhatsApp</a>
+    </div>
+
+    <!-- Earrings -->
+    <div class="jewel earring">
+      <img src="earing di.JPEG" alt="Diamond Earrings">
+      <h3>Diamond Look Earrings</h3>
+      <p class="price">Rent: ₹399</p>
+      <a class="rent-btn" href="https://wa.me/919876543210?text=I%20want%20to%20rent%20Diamond%20Earrings" target="_blank">Rent via WhatsApp</a>
+    </div>
+
+    <div class="jewel earring">
+      <img src="gold ear.JPEG" alt="Gold Earrings">
+      <h3>Traditional Gold Earrings</h3>
+      <p class="price">Rent: ₹200</p>
+      <a class="rent-btn" href="https://wa.me/919876543210?text=I%20want%20to%20rent%20Gold%20Earrings" target="_blank">Rent via WhatsApp</a>
+    </div>
+
+    <!-- Bangles -->
+    <div class="jewel bangle">
+      <img src="banlge g.JPEG" alt="Gold Bangles">
+      <h3>Gold Plated Bangles</h3>
+      <p class="price">Rent: ₹200</p>
+      <a class="rent-btn" href="https://wa.me/919876543210?text=I%20want%20to%20rent%20Gold%20Bangles" target="_blank">Rent via WhatsApp</a>
+    </div>
+
+    <div class="jewel bangle">
+      <img src="stone.JPEG" alt="Stone Bangles">
+      <h3>Stone Studded Bangles</h3>
+      <p class="price">Rent: ₹183</p>
+      <a class="rent-btn" href="https://wa.me/919876543210?text=I%20want%20to%20rent%20Stone%20Bangles" target="_blank">Rent via WhatsApp</a>
+    </div>
+
+    <!-- Bridal Sets -->
+    <div class="jewel bridal">
+      <img src="bride.JPEG" alt="Bridal Necklace">
+      <h3>Complete Bridal Set</h3>
+      <p class="price">Rent: ₹1299</p>
+      <a class="rent-btn" href="https://wa.me/919876543210?text=I%20want%20to%20rent%20Bridal%20Set" target="_blank">Rent via WhatsApp</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Glamour Rent Jewels offers premium jewelry for rent at affordable prices. Perfect for weddings, parties, and special occasions. Shine without spending lakhs!</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 +91 9947294586</p>
+    <p>📧 glamourjewels@gmail.com</p>
+    <p>📍 Calicut, Kerala</p>
+    <a class="rent-btn" href="https://wa.me/919876543210?text=Hi%20I%20want%20to%20rent%20jewelry" target="_blank">Chat on WhatsApp</a>
+  </section>
+  <!-- BOOKING FORM START -->
+  <section id="booking" style="padding:40px 20px; text-align:center;">
+    <h2>Book Your Jewelry</h2>
+    <p>Fill out the form and we will confirm your booking.</p>
+
+    <form id="bookingForm" style="max-width:600px; margin:18px auto; text-align:left; background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+      <label for="b_name">Full Name</label>
+      <input id="b_name" type="text" required style="width:100%; padding:10px; margin-bottom:12px;">
+
+      <label for="b_phone">Phone Number</label>
+      <input id="b_phone" type="tel" required style="width:100%; padding:10px; margin-bottom:12px;">
+
+      <label for="b_item">Select Jewelry</label>
+      <select id="b_item" required style="width:100%; padding:10px; margin-bottom:12px;">
+        <option value="">-- Choose an item --</option>
+        <option value="Gold Plated Necklace">Gold Plated Necklace</option>
+        <option value="Pearl Choker Necklace">Pearl Choker Necklace</option>
+        <option value="Diamond Look Earrings">Diamond Look Earrings</option>
+        <option value="Gold Plated Bangles">Gold Plated Bangles</option>
+        <option value="Complete Bridal Set">Complete Bridal Set</option>
+      </select>
+
+      <label for="b_date">Booking Date</label>
+      <input id="b_date" type="date" required style="width:100%; padding:10px; margin-bottom:12px;">
+
+      <button type="submit" style="background:#d4af37; color:white; border:none; padding:12px; border-radius:6px; width:100%; font-weight:bold; cursor:pointer;">
+        Send Booking via WhatsApp
+      </button>
+    </form>
+  </section>
+  <!-- BOOKING FORM END -->
+  <footer>
+    <p>© 2025 Glamour Rent Jewels. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Filter function
+    function filterJewels(category) {
+      const jewels = document.querySelectorAll('.jewel');
+      jewels.forEach(jewel => {
+        if (category === 'all') {
+          jewel.style.display = 'block';
+        } else if (jewel.classList.contains(category)) {
+          jewel.style.display = 'block';
+        } else {
+          jewel.style.display = 'none';
+        }
+      });
+    }
+    // Show all by default
+    filterJewels('all');
+  </script>
+</body>
+</html>
